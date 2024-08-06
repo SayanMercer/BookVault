@@ -1,0 +1,368 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "58dbf714-a1c5-4959-acc3-08304689afc2",
+      "name": "BookVault",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2024-05-18T15:35:48.000Z",
+      "createdAt": "2024-05-18T15:35:01.000Z",
+      "lastUpdatedBy": "4856615",
+      "uid": "4856615-58dbf714-a1c5-4959-acc3-08304689afc2"
+    },
+    "item": [
+      {
+        "name": "Book",
+        "item": [
+          {
+            "name": "CREATE book",
+            "id": "eab8a3f8-ce32-49d0-9d5d-dc08927a19a6",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"bookName\": \"Intro to Python\",\n    \"genre\": \"PROGRAMMING\",\n    \"authorEmail\": \"peter@gmail.com\",\n    \"authorName\": \"Peter Jonas\"   \n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "localhost:8080/books",
+                "host": [
+                  "localhost"
+                ],
+                "port": "8080",
+                "path": [
+                  "books"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "a840153a-7b11-4dc4-8287-61fe59368dae",
+                "name": "CREATE BOOK",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"bookName\": \"Intro to Python\",\n    \"genre\": \"PROGRAMMING\",\n    \"authorEmail\": \"peter@gmail.com\",\n    \"authorName\": \"Peter Jonas\"   \n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "localhost:8080/books",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                      "books"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Sat, 18 May 2024 15:53:21 GMT"
+                  },
+                  {
+                    "key": "Keep-Alive",
+                    "value": "timeout=60"
+                  },
+                  {
+                    "key": "Connection",
+                    "value": "keep-alive"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "4",
+                "uid": "4856615-a840153a-7b11-4dc4-8287-61fe59368dae"
+              }
+            ],
+            "uid": "4856615-eab8a3f8-ce32-49d0-9d5d-dc08927a19a6"
+          },
+          {
+            "name": "GET Book By ID",
+            "id": "bf2cb97b-3b0a-4121-8311-9d600af368e7",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": []
+            },
+            "response": [
+              {
+                "id": "49861f9a-ad19-4998-b515-d1bceb12de3d",
+                "name": "GET Book By ID",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "localhost:8080/books/4",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                      "books",
+                      "4"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Sat, 18 May 2024 16:11:37 GMT"
+                  },
+                  {
+                    "key": "Keep-Alive",
+                    "value": "timeout=60"
+                  },
+                  {
+                    "key": "Connection",
+                    "value": "keep-alive"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 4,\n    \"genre\": \"PROGRAMMING\",\n    \"name\": \"Intro to Python\",\n    \"author\": {\n        \"id\": 1,\n        \"name\": \"Peter Jonas\",\n        \"email\": \"peter@gmail.com\"\n    },\n    \"student\": null,\n    \"createdOn\": \"2024-05-18T15:53:21.917+00:00\",\n    \"updatedOn\": \"2024-05-18T15:53:21.917+00:00\",\n    \"transactionList\": []\n}",
+                "uid": "4856615-49861f9a-ad19-4998-b515-d1bceb12de3d"
+              }
+            ],
+            "uid": "4856615-bf2cb97b-3b0a-4121-8311-9d600af368e7"
+          }
+        ],
+        "id": "9be913c6-0032-4011-9ab2-4df217caf71c",
+        "uid": "4856615-9be913c6-0032-4011-9ab2-4df217caf71c"
+      },
+      {
+        "name": "Student",
+        "item": [
+          {
+            "name": "GET Student By ID",
+            "id": "39fb2600-071e-41d6-b80d-5787e71efe34",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "localhost:8080/students/1",
+                "host": [
+                  "localhost"
+                ],
+                "port": "8080",
+                "path": [
+                  "students",
+                  "1"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "93f8d2fd-a3da-4db7-898f-0042ab00bbc4",
+                "name": "GET Student BY ID",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "localhost:8080/students/1",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                      "students",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Sat, 18 May 2024 15:57:48 GMT"
+                  },
+                  {
+                    "key": "Keep-Alive",
+                    "value": "timeout=60"
+                  },
+                  {
+                    "key": "Connection",
+                    "value": "keep-alive"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"student\": {\n        \"id\": 1,\n        \"name\": \"Abhiram\",\n        \"email\": \"abhiram@yahoo.co.in\",\n        \"mobile\": \"+91999999977\",\n        \"createdOn\": \"2024-05-18T14:24:12.303+00:00\",\n        \"updatedOn\": \"2024-05-18T15:04:43.785+00:00\",\n        \"bookList\": [],\n        \"transactions\": [],\n        \"status\": null\n    },\n    \"bookList\": null\n}",
+                "uid": "4856615-93f8d2fd-a3da-4db7-898f-0042ab00bbc4"
+              }
+            ],
+            "uid": "4856615-39fb2600-071e-41d6-b80d-5787e71efe34"
+          },
+          {
+            "name": "CREATE Student",
+            "id": "21a710bf-7308-4e9e-8bce-a68686ae58e6",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"Rahul\",\n    \"mobile\": \"+91999999998\",\n    \"email\": \"rahul+1@gmail.com\"\n}"
+              },
+              "url": {
+                "raw": "localhost:8080/students",
+                "host": [
+                  "localhost"
+                ],
+                "port": "8080",
+                "path": [
+                  "students"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4856615-21a710bf-7308-4e9e-8bce-a68686ae58e6"
+          }
+        ],
+        "id": "ae7e8901-6400-432e-9faa-42ce6cf80415",
+        "uid": "4856615-ae7e8901-6400-432e-9faa-42ce6cf80415"
+      },
+      {
+        "name": "Transactions",
+        "item": [
+          {
+            "name": "Initiate Issue Transaction",
+            "id": "17b6a7ac-8076-4e08-809b-8a223ace0bbc",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "url": {
+                "raw": "localhost:8080/transactions/initiate?studentId=1&bookId=5&transactionType=ISSUE",
+                "host": [
+                  "localhost"
+                ],
+                "port": "8080",
+                "path": [
+                  "transactions",
+                  "initiate"
+                ],
+                "query": [
+                  {
+                    "key": "studentId",
+                    "value": "1"
+                  },
+                  {
+                    "key": "bookId",
+                    "value": "5"
+                  },
+                  {
+                    "key": "transactionType",
+                    "value": "ISSUE"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4856615-17b6a7ac-8076-4e08-809b-8a223ace0bbc"
+          },
+          {
+            "name": "Initiate Return Transaction",
+            "id": "19850281-a127-4d18-bcf9-c0e255af5b0f",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "url": {
+                "raw": "localhost:8080/transactions/initiate?studentId=1&bookId=5&transactionType=ISSUE",
+                "host": [
+                  "localhost"
+                ],
+                "port": "8080",
+                "path": [
+                  "transactions",
+                  "initiate"
+                ],
+                "query": [
+                  {
+                    "key": "studentId",
+                    "value": "1"
+                  },
+                  {
+                    "key": "bookId",
+                    "value": "5"
+                  },
+                  {
+                    "key": "transactionType",
+                    "value": "ISSUE"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "4856615-19850281-a127-4d18-bcf9-c0e255af5b0f"
+          }
+        ],
+        "id": "452c0df0-1c74-44f0-a634-1052bb412db3",
+        "uid": "4856615-452c0df0-1c74-44f0-a634-1052bb412db3"
+      }
+    ]
+  }
+}

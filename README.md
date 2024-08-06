@@ -1,4 +1,4 @@
-This Library Management System Backend Project is designed to serve a variety of institutions, including universities and organizations. It facilitates seamless book borrowing for both students and employees, ensuring efficient daily management of library resources.
+This BoolVault is a Library management system. It is designed to serve a variety of institutions, including universities and organizations. It facilitates seamless book borrowing for both students and employees, ensuring efficient daily management of library resources.
 
 It uses Java 17, Springboot  3.2.5, JPA, Hibernate, and databases such as Oracle MysQL. For test case coverage it uses Junit and Mockito. You can download the PostMan pack from the repository and change the DB settings and you can run it on localhost.
 
